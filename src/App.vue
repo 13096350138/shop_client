@@ -7,8 +7,20 @@
 </template>
 
 <script>
+import {mapActions} from 'vuex'
 import FooterGuide from './conponents/FooterGuide/FooterGuide.vue'
 export default {
+  /*调用actions里的方法，发送请求 */
+  mounted(){
+    //this.$store.dispatch('getAddress')
+    this.getAddress()
+  },
+  /*调用actions里的方法，发送请求 */
+  /*读取state */
+  methods:{
+    ...mapActions(['getAddress'])
+  },
+  /*读取state */
   components:{
     FooterGuide
   }

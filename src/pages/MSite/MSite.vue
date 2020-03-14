@@ -1,7 +1,7 @@
 <template>
   <section class="msite">
     <!--首页头部-->
-    <HeaderTop title="龙泉驿区成都大学">
+    <HeaderTop :title="address.name">
       <span class="header_search" slot="left">
         <i class="iconfont icon-xingtaiduICON_sousuo---copy"></i>
       </span>
@@ -130,6 +130,7 @@
 </template>
 
 <script>
+  import {mapState} from "vuex"
   import Swiper from "swiper"
   import "swiper/css/swiper.min.css"
   import HeaderTop from "../../conponents/HeaderTop/HeaderTop.vue"
@@ -146,6 +147,11 @@
         },
       })
     },
+    /*显示读取的数据 */
+    computed:{
+      ...mapState(['address'])
+    },
+    /*显示读取的数据 */
     components:{
       HeaderTop,
       ShopList
