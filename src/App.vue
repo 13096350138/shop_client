@@ -14,11 +14,12 @@ export default {
   mounted(){
     //this.$store.dispatch('getAddress')
     this.getAddress()
+    this.getUserInfo()
   },
   /*调用actions里的方法，发送请求 */
   /*读取state */
   methods:{
-    ...mapActions(['getAddress'])
+    ...mapActions(['getAddress','getUserInfo'])
   },
   /*读取state */
   components:{

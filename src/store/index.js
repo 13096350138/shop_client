@@ -1,5 +1,5 @@
 /*
-vuex最核心的管理对象store
+vuex最核心的管理对象store    配置store对象
  */
 
  import Vue from 'vue'
